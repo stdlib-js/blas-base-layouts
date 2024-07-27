@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import layouts from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@esm/index.mjs';
+import layouts from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@v0.0.2-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { enum } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@esm/index.mjs';
+import { enum } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@v0.0.2-esm/index.mjs';
 ```
 
 #### layouts()
@@ -102,7 +102,7 @@ The output array contains the following layouts:
 <script type="module">
 
 var contains = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-assert-contains' ).factory;
-import layouts from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@esm/index.mjs';
+import layouts from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@v0.0.2-esm/index.mjs';
 
 var isLayout = contains( layouts() );
 
