@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-layouts
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-layouts = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var layouts = require( 'path/to/vendor/umd/blas-base-layouts/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-layouts@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.layouts;
-})();
-</script>
+var layouts = require( '@stdlib/blas-base-layouts' );
 ```
 
 #### layouts()
@@ -113,13 +107,8 @@ The output array contains the following layouts:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-assert-contains@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var contains = require( '@stdlib/array-base-assert-contains' ).factory;
 var layouts = require( '@stdlib/blas-base-layouts' );
 
 var isLayout = contains( layouts() );
@@ -132,11 +121,6 @@ bool = isLayout( 'column-major' );
 
 bool = isLayout( 'beep' );
 // returns false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -145,7 +129,70 @@ bool = isLayout( 'beep' );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/layouts.h"
+```
+
+#### STDLIB_BLAS_LAYOUT
+
+An enumeration of BLAS memory layouts with the following fields:
+
+-   **STDLIB_BLAS_ROW_MAJOR**: row-major (C-style) order.
+-   **STDLIB_BLAS_COLUMN_MAJOR**: column-major (Fortran-style) order.
+
+```c
+#include "stdlib/blas/base/layouts.h"
+
+const enum STDLIB_BLAS_LAYOUT layout = STDLIB_BLAS_ROW_MAJOR;
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   Enumeration constants should be considered opaque values, and one should **not** rely on specific integer values.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -202,8 +249,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-layouts.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-layouts
 
-[test-image]: https://github.com/stdlib-js/blas-base-layouts/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/blas-base-layouts/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/blas-base-layouts/actions/workflows/test.yml/badge.svg?branch=v0.0.3
+[test-url]: https://github.com/stdlib-js/blas-base-layouts/actions/workflows/test.yml?query=branch:v0.0.3
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-layouts/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-layouts?branch=main
